@@ -1,1109 +1,1446 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Vijay Arulsamy | Accounting, Excel & MIS Professional</title>
 
-    <meta name="description"
-          content="Vijay Arulsamy - Accounting, Excel, MIS, business reporting, inventory analysis and business dashboards.">
-
-<style>
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        color: #f5f5f5;
-        background: #0a0a0a;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    img {
-        max-width: 100%;
-        display: block;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 1150px;
-        margin: auto;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-        background: #0a0a0a;
-        border-bottom: 1px solid #252525;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    nav {
-        min-height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .logo {
-        font-size: 22px;
-        font-weight: 700;
-        color: #ffffff;
-    }
-
-    .logo::after {
-        content: ".";
-        color: #ffc400;
-    }
-
-    .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 28px;
-    }
-
-    .nav-links a {
-        color: #d4d4d4;
-        font-size: 15px;
-        font-weight: 500;
-    }
-
-    .nav-links a:hover {
-        color: #ffc400;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-        background: #0a0a0a;
-        padding: 100px 0;
-    }
-
-    .hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 60px;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 54px;
-        line-height: 1.1;
-        color: #ffffff;
-        margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-        color: #ffc400;
-    }
-
-    .hero-subtitle {
-        font-size: 21px;
-        font-weight: 600;
-        color: #f0f0f0;
-        margin-bottom: 18px;
-    }
-
-    .hero-text {
-        font-size: 17px;
-        color: #bdbdbd;
-        max-width: 700px;
-        margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 13px 22px;
-        border-radius: 6px;
-        font-weight: 700;
-        transition: 0.2s ease;
-    }
-
-    .btn-primary {
-        background: #ffc400;
-        color: #0a0a0a;
-    }
-
-    .btn-primary:hover {
-        background: #ffd633;
-    }
-
-    .btn-secondary {
-        border: 1px solid #ffc400;
-        color: #ffc400;
-        background: transparent;
-    }
-
-    .btn-secondary:hover {
-        background: #ffc400;
-        color: #0a0a0a;
-    }
-
-
-    /* PROFILE */
-
-    .profile-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-
-    .profile-card {
-        background: #111111;
-        padding: 10px;
-        border-radius: 18px;
-        border: 1px solid #2a2a2a;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
-    }
-
-    .profile-card img {
-        width: 320px;
-        height: 400px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 12px;
-    }
-
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    section {
-        padding: 85px 0;
-    }
-
-    .section-title {
-        font-size: 36px;
-        color: #ffffff;
-        margin-bottom: 14px;
-    }
-
-    .section-title::after {
-        content: "";
-        display: block;
-        width: 55px;
-        height: 4px;
-        background: #ffc400;
-        margin-top: 12px;
-        border-radius: 2px;
-    }
-
-    .section-description {
-        color: #a8a8a8;
-        max-width: 760px;
-        margin-bottom: 42px;
-        font-size: 16px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-        background: #111111;
-    }
-
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: start;
-    }
-
-    .about-text {
-        color: #c5c5c5;
-        font-size: 17px;
-    }
-
-    .about-text p {
-        margin-bottom: 18px;
-    }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .skill {
-        padding: 9px 14px;
-        border-radius: 20px;
-        background: #1b1b1b;
-        border: 1px solid #333333;
-        color: #ffc400;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-        background: #0a0a0a;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .service-card {
-        background: #111111;
-        border: 1px solid #292929;
-        border-radius: 12px;
-        padding: 30px;
-        transition: 0.2s ease;
-    }
-
-    .service-card:hover {
-        transform: translateY(-4px);
-        border-color: #ffc400;
-        box-shadow: 0 10px 30px rgba(255, 196, 0, 0.08);
-    }
-
-    .service-icon {
-        width: 46px;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #ffc400;
-        color: #0a0a0a;
-        border-radius: 10px;
-        font-size: 22px;
-        margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-        color: #ffffff;
-        margin-bottom: 10px;
-        font-size: 19px;
-    }
-
-    .service-card p {
-        color: #a8a8a8;
-        font-size: 15px;
-    }
-
-
-    /* =========================
-       PORTFOLIO
-    ========================= */
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 26px;
-    }
-
-    .portfolio-card {
-        border: 1px solid #292929;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #111111;
-    }
-
-    .portfolio-card:hover {
-        border-color: #ffc400;
-    }
-
-    .portfolio-visual {
-        height: 190px;
-        background: #1a1a1a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffc400;
-        font-size: 23px;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-
-    .portfolio-content {
-        padding: 26px;
-    }
-
-    .portfolio-content h3 {
-        margin-bottom: 10px;
-        color: #ffffff;
-        font-size: 20px;
-    }
-
-    .portfolio-content p {
-        color: #a8a8a8;
-        font-size: 15px;
-    }
-
-
-    /* =========================
-       BLOG
-    ========================= */
-
-    .blog {
-        background: #111111;
-    }
-
-    .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .blog-card {
-        background: #0a0a0a;
-        border: 1px solid #292929;
-        border-radius: 12px;
-        padding: 25px;
-    }
-
-    .blog-card:hover {
-        border-color: #ffc400;
-    }
-
-    .blog-card .tag {
-        display: inline-block;
-        font-size: 12px;
-        color: #0a0a0a;
-        background: #ffc400;
-        padding: 6px 10px;
-        border-radius: 20px;
-        margin-bottom: 14px;
-    }
-
-    .blog-card h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
-
-    .blog-card p {
-        color: #a8a8a8;
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-
-    .read-more {
-        color: #ffc400;
-        font-size: 14px;
-        font-weight: 700;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-        background: #ffc400;
-        color: #0a0a0a;
-    }
-
-    .contact .section-title {
-        color: #0a0a0a;
-    }
-
-    .contact .section-title::after {
-        background: #0a0a0a;
-    }
-
-    .contact-text {
-        color: #1f1f1f;
-        max-width: 700px;
-        margin-bottom: 28px;
-    }
-
-    .contact-links {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .contact-link {
-        padding: 11px 17px;
-        border: 1px solid #0a0a0a;
-        border-radius: 7px;
-        color: #0a0a0a;
-        font-weight: 700;
-    }
-
-    .contact-link:hover {
-        background: #0a0a0a;
-        color: #ffc400;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-        background: #000000;
-        color: #858585;
-        text-align: center;
-        padding: 25px;
-        font-size: 14px;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 900px) {
-
-        .hero-grid {
-            grid-template-columns: 1fr;
+    <meta
+        name="description"
+        content="Vijay Arulsamy - Accounting, Excel, MIS, business reporting, inventory analysis and business dashboards."
+    >
+
+    <style>
+
+        /* =====================================
+           GLOBAL
+        ===================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .profile-wrapper {
-            order: -1;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .hero h1 {
-            font-size: 42px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #f5f5f5;
+            background: #0a0a0a;
         }
 
-        .about-grid {
-            grid-template-columns: 1fr;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        .services-grid {
-            grid-template-columns: 1fr 1fr;
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        .blog-grid {
-            grid-template-columns: 1fr 1fr;
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
         }
-    }
 
 
-    @media (max-width: 650px) {
+        /* =====================================
+           HEADER
+        ===================================== */
+
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #252525;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #ffc400;
+        }
 
         .nav-links {
-            display: none;
+            display: flex;
+            list-style: none;
+            gap: 28px;
         }
 
+        .nav-links a {
+            color: #d4d4d4;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffc400;
+        }
+
+
+        /* =====================================
+           HERO
+        ===================================== */
+
         .hero {
-            padding: 60px 0;
+            background: #0a0a0a;
+            padding: 100px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 54px;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #ffc400;
         }
 
         .hero-subtitle {
-            font-size: 18px;
+            font-size: 21px;
+            font-weight: 600;
+            color: #f0f0f0;
+            margin-bottom: 18px;
+        }
+
+        .hero-text {
+            font-size: 17px;
+            color: #bdbdbd;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #ffc400;
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            background: #ffd633;
+        }
+
+        .btn-secondary {
+            border: 1px solid #ffc400;
+            color: #ffc400;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #ffc400;
+            color: #0a0a0a;
+        }
+
+
+        /* =====================================
+           PROFILE
+        ===================================== */
+
+        .profile-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            background: #111111;
+            padding: 10px;
+            border-radius: 18px;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
         }
 
         .profile-card img {
-            width: 270px;
-            height: 340px;
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
         }
 
-        .services-grid,
-        .portfolio-grid,
-        .blog-grid {
-            grid-template-columns: 1fr;
-        }
+
+        /* =====================================
+           SECTION COMMON
+        ===================================== */
 
         section {
-            padding: 60px 0;
+            padding: 85px 0;
         }
 
         .section-title {
-            font-size: 30px;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 14px;
         }
-    }
 
-</style>
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 4px;
+            background: #ffc400;
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            color: #a8a8a8;
+            max-width: 760px;
+            margin-bottom: 42px;
+            font-size: 16px;
+        }
+
+
+        /* =====================================
+           ABOUT
+        ===================================== */
+
+        .about {
+            background: #111111;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text {
+            color: #c5c5c5;
+            font-size: 17px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 9px 14px;
+            border-radius: 20px;
+            background: #1b1b1b;
+            border: 1px solid #333333;
+            color: #ffc400;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+
+        /* =====================================
+           CERTIFICATIONS
+        ===================================== */
+
+        .certifications {
+            background: #0a0a0a;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .certification-card {
+            background: #111111;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.2s ease;
+        }
+
+        .certification-card:hover {
+            border-color: #ffc400;
+            transform: translateY(-4px);
+        }
+
+        .certification-badge {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffc400;
+            color: #0a0a0a;
+            border-radius: 10px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .certification-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .certification-card p {
+            color: #a8a8a8;
+            font-size: 15px;
+        }
+
+
+        /* =====================================
+           SERVICES
+        ===================================== */
+
+        .services {
+            background: #111111;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: #0a0a0a;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #ffc400;
+            box-shadow: 0 10px 30px rgba(255, 196, 0, 0.08);
+        }
+
+        .service-icon {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffc400;
+            color: #0a0a0a;
+            border-radius: 10px;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .service-card p {
+            color: #a8a8a8;
+            font-size: 15px;
+        }
+
+
+        /* =====================================
+           PORTFOLIO
+        ===================================== */
+
+        .portfolio {
+            background: #0a0a0a;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 26px;
+        }
+
+        .portfolio-card {
+            border: 1px solid #292929;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #111111;
+            transition: 0.2s ease;
+        }
+
+        .portfolio-card:hover {
+            border-color: #ffc400;
+            transform: translateY(-4px);
+        }
+
+        .portfolio-visual {
+            height: 190px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffc400;
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-content {
+            padding: 26px;
+        }
+
+        .portfolio-content h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .portfolio-content p {
+            color: #a8a8a8;
+            font-size: 15px;
+        }
+
+
+        /* =====================================
+           BLOG
+        ===================================== */
+
+        .blog {
+            background: #111111;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: #0a0a0a;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.2s ease;
+        }
+
+        .blog-card:hover {
+            border-color: #ffc400;
+            transform: translateY(-4px);
+        }
+
+        .blog-card .tag {
+            display: inline-block;
+            font-size: 12px;
+            color: #0a0a0a;
+            background: #ffc400;
+            padding: 6px 10px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .blog-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .blog-card p {
+            color: #a8a8a8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #ffc400;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================
+           CONTACT
+        ===================================== */
+
+        .contact {
+            background: #ffc400;
+            color: #0a0a0a;
+        }
+
+        .contact .section-title {
+            color: #0a0a0a;
+        }
+
+        .contact .section-title::after {
+            background: #0a0a0a;
+        }
+
+        .contact-text {
+            color: #1f1f1f;
+            max-width: 700px;
+            margin-bottom: 28px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            padding: 11px 17px;
+            border: 1px solid #0a0a0a;
+            border-radius: 7px;
+            color: #0a0a0a;
+            font-weight: 700;
+        }
+
+        .contact-link:hover {
+            background: #0a0a0a;
+            color: #ffc400;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+            background: #000000;
+            color: #858585;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-wrapper {
+                order: -1;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .profile-card img {
+                width: 270px;
+                height: 340px;
+            }
+
+            .certifications-grid,
+            .services-grid,
+            .portfolio-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
 
-<header>
-    <div class="container">
-        <nav>
+    <!-- =====================================
+         HEADER
+    ===================================== -->
 
-            <div class="logo">
-                Vijay Arulsamy
-            </div>
+    <header>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="container">
 
-        </nav>
-    </div>
-</header>
+            <nav>
+
+                <div class="logo">
+                    Vijay Arulsamy<span>.</span>
+                </div>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#certifications">Certifications</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+    <!-- =====================================
+         HERO
+    ===================================== -->
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="hero-grid">
+            <div class="hero-grid">
 
-            <div>
 
-                <h1>
-                    Accounting,
-                    <span>Excel & MIS</span>
-                    Professional
-                </h1>
+                <div>
 
-                <p class="hero-subtitle">
-                    Business Reporting • Data Analysis • Inventory • Automation
-                </p>
+                    <h1>
 
-                <p class="hero-text">
-                    I help small and growing businesses organize accounting,
-                    sales and inventory data into clear, accurate and useful
-                    business reports.
-                </p>
+                        Accounting,
+                        <span>Excel & MIS</span>
+                        Professional
 
-                <div class="hero-buttons">
+                    </h1>
 
-                    <a href="#portfolio" class="btn btn-primary">
-                        View My Work
-                    </a>
 
-                    <a href="#contact" class="btn btn-secondary">
-                        Contact Me
-                    </a>
+                    <p class="hero-subtitle">
+
+                        Business Reporting • Data Analysis • Inventory • Automation
+
+                    </p>
+
+
+                    <p class="hero-text">
+
+                        I help small and growing businesses organize
+                        accounting, sales and inventory data into clear,
+                        accurate and useful business reports.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#portfolio"
+                            class="btn btn-primary"
+                        >
+                            View My Work
+                        </a>
+
+
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                        >
+                            Contact Me
+                        </a>
+
+                    </div>
 
                 </div>
 
+
+                <div class="profile-wrapper">
+
+                    <div class="profile-card">
+
+                        <img
+                            src="vijay-profie.png"
+                            alt="Vijay Arulsamy - Accounting and MIS Professional"
+                        >
+
+                    </div>
+
+                </div>
+
+
             </div>
 
+        </div>
 
-            <div class="profile-wrapper">
+    </section>
 
-                <div class="profile-card">
 
-                    <img
-                        src="vijay-profie.png"
-                        alt="Vijay Arulsamy - Accounting and MIS Professional"
+    <!-- =====================================
+         ABOUT
+    ===================================== -->
+
+    <section
+        id="about"
+        class="about"
+    >
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text">
+
+                    <p>
+
+                        I am Vijay Arulsamy, an accounting and business
+                        reporting professional with experience in accounting,
+                        documentation, payroll support, inventory reporting
+                        and management information systems.
+
+                    </p>
+
+
+                    <p>
+
+                        My professional focus combines accounting knowledge
+                        with Microsoft Excel, business reporting, dashboards
+                        and data analysis to make business information easier
+                        to understand and use.
+
+                    </p>
+
+
+                    <p>
+
+                        I am also interested in business process improvement,
+                        reporting automation and practical data-driven
+                        solutions for small and growing businesses.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3
+                        style="
+                        margin-bottom:20px;
+                        color:#ffffff;
+                        "
                     >
+                        Professional Skills
+                    </h3>
+
+
+                    <div class="skills">
+
+                        <span class="skill">
+                            Microsoft Excel
+                        </span>
+
+                        <span class="skill">
+                            Advanced Excel
+                        </span>
+
+                        <span class="skill">
+                            Tally Prime
+                        </span>
+
+                        <span class="skill">
+                            SAP FI
+                        </span>
+
+                        <span class="skill">
+                            Zoho Books
+                        </span>
+
+                        <span class="skill">
+                            MIS Reporting
+                        </span>
+
+                        <span class="skill">
+                            Inventory Analysis
+                        </span>
+
+                        <span class="skill">
+                            GST
+                        </span>
+
+                        <span class="skill">
+                            TDS
+                        </span>
+
+                        <span class="skill">
+                            Payroll
+                        </span>
+
+                        <span class="skill">
+                            Business Dashboards
+                        </span>
+
+                        <span class="skill">
+                            Google Sheets
+                        </span>
+
+                    </div>
 
                 </div>
+
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- =====================================
+         CERTIFICATIONS
+    ===================================== -->
 
-<!-- =========================
-     ABOUT
-========================= -->
+    <section
+        id="certifications"
+        class="certifications"
+    >
 
-<section id="about" class="about">
+        <div class="container">
 
-    <div class="container">
+            <h2 class="section-title">
+                Certifications & Credentials
+            </h2>
 
-        <h2 class="section-title">
-            About Me
-        </h2>
 
-        <div class="about-grid">
+            <p class="section-description">
 
-            <div class="about-text">
+                Professional certifications and learning credentials
+                supporting my accounting, finance and technology skills.
 
-                <p>
-                    I am Vijay Arulsamy, an accounting and business reporting
-                    professional with experience in accounting, documentation,
-                    payroll support, inventory reporting and management
-                    information systems.
-                </p>
+            </p>
 
-                <p>
-                    My professional focus combines accounting knowledge with
-                    Microsoft Excel, business reporting, dashboards and data
-                    analysis to make business information easier to understand
-                    and use.
-                </p>
 
-                <p>
-                    I am also interested in business process improvement,
-                    reporting automation and practical data-driven solutions
-                    for small and growing businesses.
-                </p>
+            <div class="certifications-grid">
 
-            </div>
 
+                <div class="certification-card">
 
-            <div>
-
-                <h3 style="margin-bottom:20px;">
-                    Professional Skills
-                </h3>
-
-                <div class="skills">
-
-                    <span class="skill">Microsoft Excel</span>
-                    <span class="skill">Advanced Excel</span>
-                    <span class="skill">Tally Prime</span>
-                    <span class="skill">SAP FI</span>
-                    <span class="skill">Zoho Books</span>
-                    <span class="skill">MIS Reporting</span>
-                    <span class="skill">Inventory Analysis</span>
-                    <span class="skill">GST</span>
-                    <span class="skill">TDS</span>
-                    <span class="skill">Payroll</span>
-                    <span class="skill">Business Dashboards</span>
-                    <span class="skill">Google Sheets</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section id="services" class="services">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Services
-        </h2>
-
-        <p class="section-description">
-            Practical accounting, reporting and business-data support
-            for small and growing businesses.
-        </p>
-
-
-        <div class="services-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📊
-                </div>
-
-                <h3>
-                    Excel & MIS Reporting
-                </h3>
-
-                <p>
-                    Professional Excel reports, automated summaries,
-                    dashboards, target analysis and management reports.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📒
-                </div>
-
-                <h3>
-                    Accounting Support
-                </h3>
-
-                <p>
-                    Bookkeeping support, reconciliations, ledger review,
-                    P&L reporting and accounting data organization.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📦
-                </div>
-
-                <h3>
-                    Inventory Reporting
-                </h3>
-
-                <p>
-                    Stock movement, reorder analysis, ageing reports,
-                    product-wise analysis and inventory monitoring.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📈
-                </div>
-
-                <h3>
-                    Business Dashboards
-                </h3>
-
-                <p>
-                    Clear dashboards for sales, targets, products,
-                    customers and business performance.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    💻
-                </div>
-
-                <h3>
-                    Tally & Accounting Systems
-                </h3>
-
-                <p>
-                    Accounting reports, reconciliation, data checking
-                    and management reporting.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📋
-                </div>
-
-                <h3>
-                    GST, TDS & Payroll Support
-                </h3>
-
-                <p>
-                    Organizing accounting and payroll information
-                    for business reporting and compliance support.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PORTFOLIO
-========================= -->
-
-<section id="portfolio">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Selected Work
-        </h2>
-
-        <p class="section-description">
-            Examples of business reporting, analysis and management
-            information projects.
-        </p>
-
-
-        <div class="portfolio-grid">
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-visual">
-                    SALES MIS
-                </div>
-
-                <div class="portfolio-content">
+                    <div class="certification-badge">
+                        SAP
+                    </div>
 
                     <h3>
-                        Sales MIS Dashboard
+                        SAP FI Certified
                     </h3>
 
                     <p>
-                        Structured sales reporting for reviewing performance
-                        across shops, products and reporting periods.
+
+                        Certification focused on SAP Financial Accounting
+                        processes and concepts.
+
                     </p>
 
                 </div>
 
-            </div>
 
+                <div class="certification-card">
 
-            <div class="portfolio-card">
-
-                <div class="portfolio-visual">
-                    INVENTORY
-                </div>
-
-                <div class="portfolio-content">
+                    <div class="certification-badge">
+                        GST
+                    </div>
 
                     <h3>
-                        Inventory Reorder Report
+                        GST Practitioner Certified
                     </h3>
 
                     <p>
-                        Stock reporting and priority logic to identify
-                        products requiring replenishment.
+
+                        Professional knowledge of GST processes and
+                        accounting-related compliance support.
+
                     </p>
 
                 </div>
 
-            </div>
 
+                <div class="certification-card">
 
-            <div class="portfolio-card">
-
-                <div class="portfolio-visual">
-                    TARGET
-                </div>
-
-                <div class="portfolio-content">
+                    <div class="certification-badge">
+                        AI
+                    </div>
 
                     <h3>
-                        Target & Achievement Analysis
+                        Google AI / Coursera
                     </h3>
 
                     <p>
-                        Reports for comparing targets, actual sales and
-                        achievement percentages.
+
+                        Completed a six-course Google AI learning program
+                        through Coursera.
+
                     </p>
 
                 </div>
 
-            </div>
-
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-visual">
-                    PROFIT & STOCK
-                </div>
-
-                <div class="portfolio-content">
-
-                    <h3>
-                        Profit & Stock Reporting
-                    </h3>
-
-                    <p>
-                        Management reports combining sales, expenses,
-                        inventory and profitability information.
-                    </p>
-
-                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     BLOG
-========================= -->
+    <!-- =====================================
+         SERVICES
+    ===================================== -->
 
-<section id="blog" class="blog">
+    <section
+        id="services"
+        class="services"
+    >
 
-    <div class="container">
+        <div class="container">
 
-        <h2 class="section-title">
-            Latest Insights
-        </h2>
-
-        <p class="section-description">
-            Practical articles about Excel, accounting, MIS reporting,
-            inventory and business analysis.
-        </p>
+            <h2 class="section-title">
+                Services
+            </h2>
 
 
-        <div class="blog-grid">
+            <p class="section-description">
 
-            <div class="blog-card">
+                Practical accounting, reporting and business-data support
+                for small and growing businesses.
 
-                <span class="tag">
-                    Excel
-                </span>
-
-                <h3>
-                    SUMIFS in Excel: A Practical Business Example
-                </h3>
-
-                <p>
-                    Learn how SUMIFS can be used to analyze business
-                    data using multiple conditions.
-                </p>
-
-                <span class="read-more">
-                    Coming Soon →
-                </span>
-
-            </div>
+            </p>
 
 
-            <div class="blog-card">
-
-                <span class="tag">
-                    MIS
-                </span>
-
-                <h3>
-                    How to Create a Monthly Sales MIS Report
-                </h3>
-
-                <p>
-                    A practical approach to organizing sales information
-                    for management reporting.
-                </p>
-
-                <span class="read-more">
-                    Coming Soon →
-                </span>
-
-            </div>
+            <div class="services-grid">
 
 
-            <div class="blog-card">
+                <div class="service-card">
 
-                <span class="tag">
-                    Inventory
-                </span>
+                    <div class="service-icon">
+                        📊
+                    </div>
 
-                <h3>
-                    How to Build an Inventory Reorder Report
-                </h3>
+                    <h3>
+                        Excel & MIS Reporting
+                    </h3>
 
-                <p>
-                    Understand the basic structure of reorder and
-                    stock-priority reporting.
-                </p>
+                    <p>
 
-                <span class="read-more">
-                    Coming Soon →
-                </span>
+                        Professional Excel reports, automated summaries,
+                        dashboards, target analysis and management reports.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📒
+                    </div>
+
+                    <h3>
+                        Accounting Support
+                    </h3>
+
+                    <p>
+
+                        Bookkeeping support, reconciliations, ledger review,
+                        P&L reporting and accounting data organization.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Inventory Reporting
+                    </h3>
+
+                    <p>
+
+                        Stock movement, reorder analysis, ageing reports,
+                        product-wise analysis and inventory monitoring.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Business Dashboards
+                    </h3>
+
+                    <p>
+
+                        Clear dashboards for sales, targets, products,
+                        customers and business performance.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Tally & Accounting Systems
+                    </h3>
+
+                    <p>
+
+                        Accounting reports, reconciliation, data checking
+                        and management reporting.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        GST, TDS & Payroll Support
+                    </h3>
+
+                    <p>
+
+                        Organizing accounting and payroll information
+                        for business reporting and compliance support.
+
+                    </p>
+
+                </div>
+
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+    <!-- =====================================
+         PORTFOLIO
+    ===================================== -->
 
-<section id="contact" class="contact">
+    <section
+        id="portfolio"
+        class="portfolio"
+    >
 
-    <div class="container">
+        <div class="container">
 
-        <h2 class="section-title">
-            Let's Work Together
-        </h2>
-
-        <p class="contact-text">
-            Have an Excel, accounting, reporting or business-data problem?
-            Tell me what you currently have and what result you want
-            to achieve.
-        </p>
+            <h2 class="section-title">
+                Selected Work
+            </h2>
 
 
-        <div class="contact-links">
+            <p class="section-description">
 
-            <a class="contact-link"
-               href="mailto:your-email@example.com">
-                Email
-            </a>
+                Examples of business reporting, analysis and management
+                information projects.
 
-            <a class="contact-link"
-               href="#">
-                LinkedIn
-            </a>
+            </p>
 
-            <a class="contact-link"
-               href="#">
-                WhatsApp
-            </a>
+
+            <div class="portfolio-grid">
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-visual">
+                        SALES MIS
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Sales MIS Dashboard
+                        </h3>
+
+                        <p>
+
+                            Structured sales reporting for reviewing
+                            performance across shops, products and
+                            reporting periods.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-visual">
+                        INVENTORY
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Inventory Reorder Report
+                        </h3>
+
+                        <p>
+
+                            Stock reporting and priority logic to identify
+                            products requiring replenishment.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-visual">
+                        TARGET
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Target & Achievement Analysis
+                        </h3>
+
+                        <p>
+
+                            Reports for comparing targets, actual sales
+                            and achievement percentages.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-visual">
+                        PROFIT & STOCK
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Profit & Stock Reporting
+                        </h3>
+
+                        <p>
+
+                            Management reports combining sales, expenses,
+                            inventory and profitability information.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <!-- =====================================
+         BLOG
+    ===================================== -->
 
-<footer>
+    <section
+        id="blog"
+        class="blog"
+    >
 
-    © 2026 Vijay Arulsamy. All rights reserved.
+        <div class="container">
 
-</footer>
+            <h2 class="section-title">
+                Latest Insights
+            </h2>
+
+
+            <p class="section-description">
+
+                Practical articles about Excel, accounting, MIS reporting,
+                inventory and business analysis.
+
+            </p>
+
+
+            <div class="blog-grid">
+
+
+                <div class="blog-card">
+
+                    <span class="tag">
+                        Excel
+                    </span>
+
+                    <h3>
+                        SUMIFS in Excel: A Practical Business Example
+                    </h3>
+
+                    <p>
+
+                        Learn how SUMIFS can be used to analyze business
+                        data using multiple conditions.
+
+                    </p>
+
+                    <span class="read-more">
+                        Coming Soon →
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card">
+
+                    <span class="tag">
+                        MIS
+                    </span>
+
+                    <h3>
+                        How to Create a Monthly Sales MIS Report
+                    </h3>
+
+                    <p>
+
+                        A practical approach to organizing sales information
+                        for management reporting.
+
+                    </p>
+
+                    <span class="read-more">
+                        Coming Soon →
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card">
+
+                    <span class="tag">
+                        Inventory
+                    </span>
+
+                    <h3>
+                        How to Build an Inventory Reorder Report
+                    </h3>
+
+                    <p>
+
+                        Understand the basic structure of reorder and
+                        stock-priority reporting.
+
+                    </p>
+
+                    <span class="read-more">
+                        Coming Soon →
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CONTACT
+    ===================================== -->
+
+    <section
+        id="contact"
+        class="contact"
+    >
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Let's Work Together
+            </h2>
+
+
+            <p class="contact-text">
+
+                Have an Excel, accounting, reporting or business-data
+                problem? Tell me what you currently have and what result
+                you want to achieve.
+
+            </p>
+
+
+            <div class="contact-links">
+
+                <a
+                    class="contact-link"
+                    href="mailto:your-email@example.com"
+                >
+                    Email
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="#"
+                >
+                    LinkedIn
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="#"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
+
+    <footer>
+
+        © 2026 Vijay Arulsamy. All rights reserved.
+
+    </footer>
 
 
 </body>
+
 </html>
