@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vijay Arulsamy | Accounting, Excel & MIS Professional</title>
+
+    <meta name="description"
+          content="Vijay Arulsamy - Accounting, Excel, MIS, business reporting and data analysis professional.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            font-size: 17px;
+            color: #6b7280;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #2563eb;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            color: #2563eb;
+            background: #ffffff;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #6b7280;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Services */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            border: 1px solid #e5e7eb;
+            padding: 30px;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        /* About */
+
+        .about {
+            background: #f8fafc;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #4b5563;
+            font-size: 17px;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            padding: 10px 15px;
+            background: #eef2ff;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #3730a3;
+        }
+
+        /* Portfolio */
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            border: 1px solid #e5e7eb;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .portfolio-card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .portfolio-card p {
+            color: #6b7280;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: #111827;
+            color: #ffffff;
+        }
+
+        .contact .section-title {
+            color: #ffffff;
+        }
+
+        .contact p {
+            color: #d1d5db;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 3px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-subtitle {
+                font-size: 19px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Vijay Arulsamy</div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <h1>
+                Accounting,
+                <span>Excel & MIS</span>
+                Professional
+            </h1>
+
+            <p class="hero-subtitle">
+                Business Reporting • Data Analysis • Inventory • Automation
+            </p>
+
+            <p class="hero-text">
+                I help small and growing businesses organize their accounting,
+                sales and inventory data into clear, accurate and useful
+                business reports.
+            </p>
+
+            <div class="buttons">
+                <a href="#portfolio" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about-text">
+            I am Vijay Arulsamy, an accounting and business reporting
+            professional with experience in accounting, documentation,
+            payroll support, inventory reporting and management information
+            systems.
+
+            My professional focus combines accounting knowledge with
+            Microsoft Excel, business reporting, dashboards and data analysis
+            to make business information easier to understand and use.
+        </p>
+
+        <div class="skills">
+
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Tally Prime</span>
+            <span class="skill">SAP FI</span>
+            <span class="skill">Zoho Books</span>
+            <span class="skill">MIS Reporting</span>
+            <span class="skill">Inventory Analysis</span>
+            <span class="skill">GST</span>
+            <span class="skill">TDS</span>
+            <span class="skill">Payroll</span>
+            <span class="skill">Business Dashboards</span>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+    <div class="container">
+
+        <h2 class="section-title">Services</h2>
+
+        <p class="section-description">
+            Practical reporting and accounting support for businesses
+            that want better control over their data.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>Excel & MIS Reporting</h3>
+                <p>
+                    Professional Excel reports, automated summaries,
+                    dashboards, target analysis and management reports.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Accounting Support</h3>
+                <p>
+                    Bookkeeping support, reconciliations, ledger review,
+                    P&L reporting and accounting data organization.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Inventory Reporting</h3>
+                <p>
+                    Stock movement, reorder analysis, ageing reports,
+                    product-wise analysis and inventory monitoring.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Business Dashboards</h3>
+                <p>
+                    Clear dashboards for sales, targets, products,
+                    customers and business performance.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Tally & Accounting Systems</h3>
+                <p>
+                    Accounting reports, reconciliation, data checking
+                    and management reporting.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>GST, TDS & Payroll Support</h3>
+                <p>
+                    Organizing accounting and payroll information
+                    for business reporting and compliance support.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio" class="about">
+
+    <div class="container">
+
+        <h2 class="section-title">Selected Work</h2>
+
+        <p class="section-description">
+            Examples of business reporting and analysis projects.
+        </p>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card">
+                <h3>Sales MIS Dashboard</h3>
+
+                <p>
+                    Designed structured sales reporting for reviewing
+                    performance across shops, products and reporting
+                    periods.
+                </p>
+            </div>
+
+
+            <div class="portfolio-card">
+                <h3>Inventory Reorder Report</h3>
+
+                <p>
+                    Developed stock reporting and priority logic to
+                    identify products requiring replenishment.
+                </p>
+            </div>
+
+
+            <div class="portfolio-card">
+                <h3>Target & Achievement Analysis</h3>
+
+                <p>
+                    Created reports for comparing targets, actual sales
+                    and achievement percentages.
+                </p>
+            </div>
+
+
+            <div class="portfolio-card">
+                <h3>Profit & Stock Reporting</h3>
+
+                <p>
+                    Prepared management reports combining sales,
+                    expenses, inventory and profitability information.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">Let's Work Together</h2>
+
+        <p>
+            Have an Excel, accounting, reporting or business-data problem?
+            Tell me what you currently have and what result you want
+            to achieve.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:your-email@example.com">
+                Email
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Vijay Arulsamy. All rights reserved.
+
+</footer>
+
+</body>
+</html>
